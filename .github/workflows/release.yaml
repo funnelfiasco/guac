@@ -192,6 +192,7 @@ jobs:
       id-token: write # To sign the provenance
       contents: write # To upload assets to release
       actions: read # To read the workflow path
+      packages: write # To upload the container provenance 
     uses: slsa-framework/slsa-github-generator/.github/workflows/generator_container_slsa3.yml@v2.0.0 # must use semver here
     with:
       image: ${{ needs.goreleaser.outputs.image }}
